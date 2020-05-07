@@ -35,7 +35,7 @@
 * creates internet gateway to route vpc publicly.
 * creates tls_private_key for ssh key generation.
 * creates aws_key_pair from tls_private_key.
-* creates aws instances of t2.medium, root_block_device of 50gb, and sets the following:
+* creates aws instance (Ubuntu w/ docker) of t2.medium, root_block_device of 50gb, and sets the following:
 * tfe home directory of /opt/ptfe
 * moves tfe license to license directory /etc
 * moves application-settings.json to /etc
