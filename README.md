@@ -1,5 +1,6 @@
 # ptfe-aws-automated-install-mounted-disk
 ## Automates the install of Terraform Enterprise to AWS - mounted disk mode.
+## Automates A record creation of TFE hostname with GoDaddy API.
 
 ### ~ Not for production ~
 
@@ -44,7 +45,7 @@
 * begins the online install of tfe passing parameters for automated install.
 * creates elastic ip resource
 
-## sets up several provisioner files to upload:
+### sets up several provisioner files to upload:
 1. license file
 2. tls cert and key
 3. application-settings
