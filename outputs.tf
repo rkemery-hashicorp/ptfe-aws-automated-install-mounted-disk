@@ -9,8 +9,3 @@ output "public_key_openssh" {
 output "public_ip" {
   value = aws_eip.main.public_ip 
 }
-
-output "private_key" {
-  value     = tls_private_key.main.private_key_pem
-  sensitive = false
-}

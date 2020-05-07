@@ -3,8 +3,9 @@
 
 ### ~ Not for production ~
 
-### Directories
-certs:
+## Directories
+
+### certs:
 * server.crt - pem encoded server certificate
 * server.key - pem encoded private key
 
@@ -42,9 +43,17 @@ certs:
 * sets up godaddy script, runs it, then removes it.
 * begins the online install of tfe passing parameters for automated install.
 * creates elastic ip resource
-* sets up several provisioner files to upload:
+
+## sets up several provisioner files to upload:
 1. license file
 2. tls cert and key
 3. application-settings
 4. replicated.conf
-5. go-daddy script 
+5. go-daddy script
+
+## what to do
+1. modify application-settings.json "hostname": {} and "enc_password": {"value": ""}
+2. modify replicated.conf "DaemonAuthenticationPassword" and "TlsBootstrapHostname"
+3. mkdir in main.tf working directory called certs and place server.crt and server.key there
+4. edit hostname and domain variables in scripts/checktfeready.sh
+5. add api secret/key to godaddy.sh
