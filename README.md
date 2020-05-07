@@ -1,8 +1,8 @@
 # ptfe-aws-automated-install-mounted-disk
-## Automates the install of Terraform Enterprise to AWS - mounted disk mode.
-## Automates A record creation of TFE hostname with GoDaddy API.
+* Automates the install of Terraform Enterprise to AWS - mounted disk mode
+* Automates A record creation of TFE hostname with GoDaddy API.
 
-### ~ Not for production ~
+#### ~ Not for production ~
 
 ## Directories
 
@@ -53,8 +53,9 @@
 5. go-daddy script
 
 ## what to do
-1. modify application-settings.json "hostname": {} and "enc_password": {"value": ""}
+1. modify application-settings.json "hostname": {} and "enc_password": {}
 2. modify replicated.conf "DaemonAuthenticationPassword" and "TlsBootstrapHostname"
 3. mkdir in main.tf working directory called certs and place server.crt and server.key there
 4. edit hostname and domain variables in scripts/checktfeready.sh
 5. add api secret/key to godaddy.sh
+6. never push any secret/keys to github - ever - always sanitize your code
